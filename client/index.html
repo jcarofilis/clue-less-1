@@ -12,7 +12,7 @@
 }
  
 #ctx {
-	position: relative;
+    position: relative;
 }
 
 .table1 {
@@ -27,7 +27,7 @@
     border-bottom: 1px dotted #ccc;
     text-indent: 10px;  
 }
-.tableTextbox {
+.notebookLabel {
     background-color: #fff;
     font-family: courier, monospace;
     color: black;
@@ -40,257 +40,254 @@
     border: 1px solid #dedede;
 }      
 </style>
-
 <div id="signDiv">
-	Username: <input id="signDiv-username" type="text"></input><br>
-	Password: <input id="signDiv-password" type="password"></input>
-	<button id="signDiv-signIn">Sign In</button>
-  
+    Username: <input id="signDiv-username" type="text"></input><br> 
+    <button id="signDiv-signIn">Sign In</button> 
 </div>
-
+ 
 <div id="gameDiv" style="display:none;">
-		
-	<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
-	
-	<div id="chat-text" style="width:500px;height:100px;overflow-y:scroll">
-		<div>Hello!</div>
-		<form id="chat-form">
-			<input id="chat-input" type="text" style="width:500px"></input>
-		</form>
-		
-		<div id="notebook" >
-			<table class="table1">
-				<tr><td colspan="2"><div class="tableHeader">Character</div></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="characterName1" disabled="" value="Miss Scarlet"></td><td><input type="checkbox" id="character1"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="characterName2" disabled="" value="Colonel Mustard"></td><td><input type="checkbox" id="character2"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="characterName3" disabled="" value="Mrs. White"></td><td><input type="checkbox" id="character3"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="characterName4" disabled="" value="Mr. Green"></td><td><input type="checkbox" id="character4"></td></tr>	
-				<tr><td><input type="text" class = "tableTextbox" id="characterName5" disabled="" value="Mrs. Peacock"></td><td><input type="checkbox" id="character5"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="characterName6" disabled="" value="Professor Plum"></td><td><input type="checkbox" id="character6"></td></tr> 
-				<tr><td colspan="2"><div class="tableHeader">Weapons</div></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="weaponName1" disabled="" value="Candlestick"></td><td><input type="checkbox" id="weapon1"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="weaponName2" disabled="" value="Knife"></td><td><input type="checkbox" id="weapon2"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="weaponName3" disabled="" value="Lead Pipe"></td><td><input type="checkbox" id="weapon3"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="weaponName4" disabled="" value="Revolver"></td><td><input type="checkbox" id="weapon4"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="weaponName5" disabled="" value="Rope"></td><td><input type="checkbox" id="weapon5"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="weaponName6" disabled="" value="Wrench"></td><td><input type="checkbox" id="weapon6"></td></tr>		
-				<tr><td colspan="2"><div class="tableHeader">Rooms</div></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="roomName1" disabled="" value="Ballroom"></td><td><input type="checkbox" id="room1"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="roomName2" disabled="" value="Billiard Room"></td><td><input type="checkbox" id="room2"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="roomName3" disabled="" value="Conservatory"></td><td><input type="checkbox" id="room3"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="roomName4" disabled="" value="Dining Room"></td><td><input type="checkbox" id="room4"></td></tr>	
-				<tr><td><input type="text" class = "tableTextbox" id="roomName5" disabled="" value="Kitchen"></td><td><input type="checkbox" id="room5"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="roomName6" disabled="" value="Hall"></td><td><input type="checkbox" id="room6"></td></tr>	
-				<tr><td><input type="text" class = "tableTextbox" id="roomName7" disabled="" value="Library"></td><td><input type="checkbox" id="room7"></td></tr>
-				<tr><td><input type="text" class = "tableTextbox" id="roomName8" disabled="" value="Lounge"></td><td><input type="checkbox" id="room8"></td></tr>			
-				<tr><td><input type="text" class = "tableTextbox" id="roomName9" disabled="" value="Study"></td><td><input type="checkbox" id="room9"></td></tr>	
-			</table>				
-		</div>
-	</div>
+
+    <canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+    <div id="chat-text" style="width:500px;height:100px;overflow-y:scroll">
+    <div>Hello!</div>
+    <form id="chat-form">
+        <input id="chat-input" type="text" style="width:500px"></input>
+    </form>
+
+    <div id="notebook" >
+        <table class="table1">
+            <tr><td colspan="2"><div class="tableHeader">Character</div></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="suspect1Label" disabled="" value="Colonel Mustard"></td><td><input type="text" id="suspect1"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="suspect2Label" disabled="" value="Miss Scarlet"></td><td><input type="text" id="suspect2"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="suspect3Label" disabled="" value="Mr. Green"></td><td><input type="text" id="suspect3"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="suspect4Label" disabled="" value="Mrs. Peacock"></td><td><input type="text" id="suspect4"></td></tr>	
+            <tr><td><input type="text" class="notebookLabel" id="suspect5Label" disabled="" value="Mrs. White"></td><td><input type="text" id="suspect5"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="suspect6Label" disabled="" value="Professor Plum"></td><td><input type="text" id="suspect6"></td></tr>
+            <tr><td colspan="2"><div class="tableHeader">Weapons</div></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="weapon1Label" disabled="" value="Candlestick"></td> <td><input type="text" id="weapon1"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="weapon2Label" disabled="" value="Knife"></td><td><input type="text" id="weapon2"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="weapon3Label" disabled="" value="Lead Pipe"></td><td><input type="text" id="weapon3"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="weapon4Label" disabled="" value="Revolver"></td><td><input type="text" id="weapon4"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="weapon5Label" disabled="" value="Rope"></td><td><input type="text" id="weapon5"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="weapon6Label" disabled="" value="Wrench"></td><td><input type="text" id="weapon6"></td></tr>		
+            <tr><td colspan="2"><div class="tableHeader">Rooms</div></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="room1Label" disabled="" value="Ballroom"></td><td><input type="text" id="room1"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="room2Label" disabled="" value="Billiard Room"></td><td><input type="text" id="room2"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="room3Label" disabled="" value="Conservatory"></td><td><input type="text" id="room3"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="room4Label" disabled="" value="Dining Room"></td><td><input type="text" id="room4"></td></tr>	
+            <tr><td><input type="text" class="notebookLabel" id="room5Label" disabled="" value="Kitchen"></td><td><input type="text" id="room5"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="room6Label" disabled="" value="Hall"></td><td><input type="text" id="room6"></td></tr>	
+            <tr><td><input type="text" class="notebookLabel" id="room7Label" disabled="" value="Library"></td><td><input type="text" id="room7"></td></tr>
+            <tr><td><input type="text" class="notebookLabel" id="room8Label" disabled="" value="Lounge"></td><td><input type="text" id="room8"></td></tr>			
+            <tr><td><input type="text" class="notebookLabel" id="room9Label" disabled="" value="Study"></td><td><input type="text" id="room9"></td></tr>	
+        </table>
+    </div>
 </div>
 
 
 <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 <script>
-	var WIDTH = 500;
-	var HEIGHT = 500;
-	var socket = io();
-	
-	//sign
-	var signDiv = document.getElementById('signDiv');
-	var signDivUsername = document.getElementById('signDiv-username');
-	var signDivSignIn = document.getElementById('signDiv-signIn');
-	var signDivPassword = document.getElementById('signDiv-password');
-	
-	signDivSignIn.onclick = function(){
-		socket.emit('signIn',{username:signDivUsername.value,password:signDivPassword.value});
-	}
+    var WIDTH = 500;
+    var HEIGHT = 500;
+    var socket = io(); //initalizes 
 
-	socket.on('signInResponse',function(data){
-		if(data.success){
-			signDiv.style.display = 'none';
-			gameDiv.style.display = 'inline-block';
-		} else
-			alert("Sign in unsuccessul.");
-	});
-
-	//chat
-	var chatText = document.getElementById('chat-text');
-	var chatInput = document.getElementById('chat-input');
-	var chatForm = document.getElementById('chat-form');
-	
-	socket.on('addToChat',function(data){
-		chatText.innerHTML += '<div>' + data + '</div>';
-	});
-	socket.on('evalAnswer',function(data){
-		console.log(data);
-	});
-	
-	chatForm.onsubmit = function(e){
-		e.preventDefault();
-		if(chatInput.value[0] === '/')
-			socket.emit('evalServer',chatInput.value.slice(1));
-		else
-			socket.emit('sendMsgToServer',chatInput.value);
-		chatInput.value = '';
-	}
-	
-	//game
-	var Img = {};
-
-	Img.gameBoard = new Image();
-	Img.gameBoard.src = '/client/img/gameBoard.png';
-	
-	Img.player1 = new Image();
-	Img.player1.src = '/client/img/player1.png';	
-	
-	Img.player2 = new Image();
-	Img.player2.src = '/client/img/player2.png';	 
-	
-	Img.player3 = new Image();
-	Img.player3.src = '/client/img/player3.png';	
-	
-	Img.player4 = new Image();
-	Img.player4.src = '/client/img/player4.png';	
-	
-	Img.player5 = new Image();
-	Img.player5.src = '/client/img/player5.png';	
-	
-	Img.player6 = new Image();
-	Img.player6.src = '/client/img/player6.png';		
-	
-
-	var ctx = document.getElementById("ctx").getContext("2d");
-	ctx.font = '30px Arial';
-	
-	var Player = function(initPack){
+    //sign
+    var signDiv = document.getElementById('signDiv');
+    var signDivUsername = document.getElementById('signDiv-username');
+    var signDivSignIn = document.getElementById('signDiv-signIn');
+   
+    signDivSignIn.onclick = function(){
+        socket.emit('signIn',{username:signDivUsername.value});
+    }
+    socket.on('signInResponse',function(data){
+        if(data.success){
+            signDiv.style.display = 'none';
+            gameDiv.style.display = 'inline-block';
+        } else
+            alert("Sign in unsuccessful.");
+    });
  
-		var self = {};
-		self.id = initPack.id;
-		self.number = initPack.number;
-		self.x = initPack.x;
-		self.y = initPack.y;
-		
-		self.draw = function(){	
-			var x = self.x - Player.list[selfId].x + WIDTH/2;
-			var y = self.y - Player.list[selfId].y + HEIGHT/2;
-			
- 
-		switch(self.id) {
-    			case 1:
-			  		width = Img.player1.width*2;
-			  		height = Img.player1.height*2;
-			  		ctx.drawImage(Img.player1, 0,0,Img.player1.width,Img.player1.height, x-width/2,y-height/2,width,height);
-       			 	break;
-    			case 2:
-			  		width = Img.player2.width*2;
-			  		height = Img.player2.height*2;
-			  		ctx.drawImage(Img.player2, 0,0,Img.player2.width,Img.player2.height, x-width/2,y-height/2,width,height);
-       			 	break;
-    			case 3:
-			  		width = Img.player3.width*2;
-			  		height = Img.player3.height*2;
-			  		ctx.drawImage(Img.player3, 0,0,Img.player3.width,Img.player3.height, x-width/2,y-height/2,width,height);
-       			 	break;
-    			case 4:
-			  		width = Img.player4.width*2;
-			  		height = Img.player4.height*2;
-			  		ctx.drawImage(Img.player4, 0,0,Img.player4.width,Img.player4.height, x-width/2,y-height/2,width,height);
-       			 	break;
-    			case 5:
-			  		width = Img.player5.width*2;
-			  		height = Img.player5.height*2;
-			  		ctx.drawImage(Img.player5, 0,0,Img.player5.width,Img.player5.height, x-width/2,y-height/2,width,height);
-       			 	break;
-   				 case 6:
-			  		width = Img.player6.width*2;
-			  		height = Img.player6.height*2;
-			  		ctx.drawImage(Img.player6, 0,0,Img.player6.width,Img.player6.height, x-width/2,y-height/2,width,height);
-       			 	break;
-    			default:
-      				 width = Img.player6.width*2;
-			  		 height = Img.player6.height*2;
-			  		 ctx.drawImage(Img.player6, 0,0,Img.player6.width,Img.player6.height, x-width/2,y-height/2,width,height);										
-				}
-			}
-		
-		Player.list[self.id] = self;
-			
-		return self;
-	}
-	Player.list = {};
+   //chat
+    var chatText = document.getElementById('chat-text');
+    var chatInput = document.getElementById('chat-input');
+    var chatForm = document.getElementById('chat-form');
 
-	var selfId = null;
+    socket.on('addToChat',function(data){
+        chatText.innerHTML += '<div>' + data + '</div>';
+    });
+    socket.on('evalAnswer',function(data){
+        console.log(data);
+    });
 
-	socket.on('init',function(data){
-		if(data.selfId)
-			selfId = data.selfId;
+    chatForm.onsubmit = function(e){
+        e.preventDefault();
+        if(chatInput.value[0] === '/')
+                socket.emit('evalServer',chatInput.value.slice(1));
+        else
+                socket.emit('sendMsgToServer',chatInput.value);
+        chatInput.value = '';		
+    }
 
-		for(var i = 0 ; i < data.player.length; i++){
-			new Player(data.player[i]);
-		}
-	});
-	
-	socket.on('update',function(data){
-		for(var i = 0 ; i < data.player.length; i++){
-			var pack = data.player[i];
-			var p = Player.list[pack.id];
-			if(p){
-				if(pack.x !== undefined)
-					p.x = pack.x;
-				if(pack.y !== undefined)
-					p.y = pack.y;
-			}
-		}
-	});
-	
-	socket.on('remove',function(data){
-		for(var i = 0 ; i < data.player.length; i++){
-			delete Player.list[data.player[i]];
-		}
-	});
-	
-	setInterval(function(){
-		if(!selfId)
-			return;
-		ctx.clearRect(0,0,500,500);
-		drawGameBoard();
-		for(var i in Player.list)
-			Player.list[i].draw();
-	},40);
-	
-	var drawGameBoard = function(){
-		var x = WIDTH/2 - Player.list[selfId].x;
-		var y = HEIGHT/2 - Player.list[selfId].y;
-		ctx.drawImage(Img.gameBoard,x,y);
-	}
+    //game
+    var Img = {};
 
-	document.onkeydown = function(event){
-		if(event.keyCode === 68)	    //d
-			socket.emit('keyPress',{inputId:'right',state:true});
-		else if(event.keyCode === 83)	//s
-			socket.emit('keyPress',{inputId:'down',state:true});
-		else if(event.keyCode === 65)   //a
-			socket.emit('keyPress',{inputId:'left',state:true});
-		else if(event.keyCode === 87)   // w
-			socket.emit('keyPress',{inputId:'up',state:true});		
-	}
-	
-	document.onkeyup = function(event){
-		if(event.keyCode === 68)	    //d
-			socket.emit('keyPress',{inputId:'right',state:false});
-		else if(event.keyCode === 83)	//s
-			socket.emit('keyPress',{inputId:'down',state:false});
-		else if(event.keyCode === 65)   //a
-			socket.emit('keyPress',{inputId:'left',state:false});
-		else if(event.keyCode === 87)   // w
-			socket.emit('keyPress',{inputId:'up',state:false});
-	}
+    Img.gameBoard = new Image();
+    Img.gameBoard.src = '/client/img/gameBoard.png';
+    Img.player1 = new Image();
+    Img.player1.src = '/client/img/playerTokens/player1.png';	
+    Img.player2 = new Image();
+    Img.player2.src = '/client/img/playerTokens/player2.png';	 
+    Img.player3 = new Image();
+    Img.player3.src = '/client/img/playerTokens/player3.png';	
+    Img.player4 = new Image();
+    Img.player4.src = '/client/img/playerTokens/player4.png';	
+    Img.player5 = new Image();
+    Img.player5.src = '/client/img/playerTokens/player5.png';	
+    Img.player6 = new Image();
+    Img.player6.src = '/client/img/playerTokens/player6.png';		
 
- 
+    var ctx = document.getElementById("ctx").getContext("2d");
+    ctx.font = '30px Arial';
+
+    //var ss = document.getElementById("ss").getContext("2d");
+
+    var Player = function(initPack){
+        var self = {};
+        self.id = initPack.id;
+        self.cardsInHand = initPack.cardsInHand;
+        self.number = initPack.number;
+        self.x = initPack.x;
+        self.y = initPack.y;
+
+    self.draw = function(){
+        var x = self.x - Player.list[selfId].x + WIDTH/2;
+        var y = self.y - Player.list[selfId].y + HEIGHT/2;
+
+        switch(self.id) {
+                case 1: 
+                        width = Img.player1.width*2; 
+                        height = Img.player1.height*2;
+                        ctx.drawImage(Img.player1, 0,0,Img.player1.width,Img.player1.height, x-width/2,y-height/2,width,height);
+                        break;
+                case 2: 
+                        width = Img.player2.width*2; 
+                        height = Img.player2.height*2;
+                        ctx.drawImage(Img.player2, 0,0,Img.player2.width,Img.player2.height, x-width/2,y-height/2,width,height);
+                        break;
+                case 3: 
+                        width = Img.player3.width*2; 
+                        height = Img.player3.height*2;
+                        ctx.drawImage(Img.player3, 0,0,Img.player3.width,Img.player3.height, x-width/2,y-height/2,width,height);
+                        break;
+                case 4: 
+                        width = Img.player4.width*2; 
+                        height = Img.player4.height*2;
+                        ctx.drawImage(Img.player4, 0,0,Img.player4.width,Img.player4.height, x-width/2,y-height/2,width,height);
+                        break;
+                case 5: 
+                        width = Img.player5.width*2; 
+                        height = Img.player5.height*2;
+                        ctx.drawImage(Img.player5, 0,0,Img.player5.width,Img.player5.height, x-width/2,y-height/2,width,height);
+                        break;
+                case 6: 
+                        width = Img.player6.width*2; 
+                        height = Img.player6.height*2;
+                        ctx.drawImage(Img.player6, 0,0,Img.player6.width,Img.player6.height, x-width/2,y-height/2,width,height);
+                        break;
+                default: 
+                        width = Img.player6.width*2; 
+                        height = Img.player6.height*2;
+                        ctx.drawImage(Img.player6, 0,0,Img.player6.width,Img.player6.height, x-width/2,y-height/2,width,height);										
+                }
+        }
+
+        Player.list[self.id] = self;
+
+        return self;
+    }
+
+    Player.list = {};
+
+    /*
+        whenever a new player is created it contains all the data - only do once when its created
+     */
+    var selfId = null;
+
+    socket.on('init',function(data){
+        if(data.selfId)
+                selfId = data.selfId;
+
+        for(var i = 0 ; i < data.player.length; i++){
+                new Player(data.player[i]);
+        }
+    });
+
+    /*
+        send every frame and only contains the difference
+     */	
+    socket.on('update',function(data){
+        for(var i = 0 ; i < data.player.length; i++){
+            var pack = data.player[i];
+            var p = Player.list[pack.id];
+            if(p){
+                if(pack.x !== undefined)
+                        p.x = pack.x;
+                if(pack.y !== undefined)
+                        p.y = pack.y;
+            }
+        }
+    });
+
+
+    /*
+        send id when removed
+     */
+    socket.on('remove',function(data){
+        for(var i = 0 ; i < data.player.length; i++)
+            delete Player.list[data.player[i]];
+    });
+
+    setInterval(function(){
+        if(!selfId)
+            return;
+        ctx.clearRect(0,0,500,500);
+        drawGameBoard();
+        drawCards();
+        for(var i in Player.list)
+            Player.list[i].draw();
+    },40);
+
+    var drawGameBoard = function(){
+        var x = WIDTH/2 - Player.list[selfId].x;
+        var y = HEIGHT/2 - Player.list[selfId].y;
+        ctx.drawImage(Img.gameBoard,x,y);
+    }
+
+    var drawCards = function(){ 
+        for(i = 0; i < Player.list[selfId].cardsInHand.length; i++) 
+            document.getElementById(Player.list[selfId].cardsInHand[i]).value = "in your hand";
+    }   
+    
+    document.onkeydown = function(event){
+        if(event.keyCode === 68)    //d
+            socket.emit('keyPress',{inputId:'right',state:true});
+        else if(event.keyCode === 83)   //s
+            socket.emit('keyPress',{inputId:'down',state:true});
+        else if(event.keyCode === 65) //a
+            socket.emit('keyPress',{inputId:'left',state:true});
+        else if(event.keyCode === 87) // w
+            socket.emit('keyPress',{inputId:'up',state:true});
+    }
+    document.onkeyup = function(event){
+        if(event.keyCode === 68)    //d
+            socket.emit('keyPress',{inputId:'right',state:false});
+        else if(event.keyCode === 83)   //s
+            socket.emit('keyPress',{inputId:'down',state:false});
+        else if(event.keyCode === 65) //a
+            socket.emit('keyPress',{inputId:'left',state:false});
+        else if(event.keyCode === 87) // w
+            socket.emit('keyPress',{inputId:'up',state:false});
+    }
+   
 </script>
-
-
-
-
-
