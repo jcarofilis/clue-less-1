@@ -6,8 +6,12 @@ Notes:
         - Added Deck / Cards features for dealing - Currently displays the cards each players holds in there personal notebook
  
 
+JS: 05/05/18
+	- test
 
 -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+//test
 
 //app.js
 var playerId = 0;
