@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "clue-less-game",
   "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
